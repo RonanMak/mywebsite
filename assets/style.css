@@ -1,0 +1,705 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+/* Navbar */
+
+#navbar{
+  position: fixed;
+  right: -200px;
+  width: 400px;
+  height: 100vh;
+  background: url(./images/753db0d2bc6e6551a8a7f5b41ed833d5.jpg) no-repeat center center;
+  background-size: cover;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  transition: 0.8s;
+}
+
+#navbar.active{
+  right: 0;
+}
+
+#navbar ul{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#navbar ul li{
+  list-style: none;
+}
+
+#navbar ul li a{
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 15px;
+}
+
+#navbar ul li a:hover{
+  color: #255784;
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+}
+
+
+
+/* Home Page */
+
+header{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 100px;
+  z-index: 5;
+  transition: 3.5s;
+}
+
+header .logo{
+  position: relative;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 3.5s;
+}
+
+header #toggle{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+header #toggle:before{
+  content: '';
+  position: absolute;
+  top: 7px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+header #toggle:after{
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+.banner{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  min-height: 100vh;
+  padding: 100px;
+  background: url(./images/811658.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  transition: 3s;
+  z-index: 5;
+}
+
+.banner.active{
+  transform: translateX(-400px);
+}
+
+.banner #time{
+  position: absolute;
+  color: aquamarine;
+  font-weight: bold;
+  font-size: 1.5em;
+  bottom: 1rem;
+  right: 6rem;
+}
+
+.bannerABT #time{
+  position: absolute;
+  color: aquamarine;
+  font-weight: bold;
+  font-size: 1.5em;
+  bottom: 1rem;
+  right: 6rem;
+}
+
+.bannerHOB #time{
+  position: absolute;
+  color: aquamarine;
+  font-weight: bold;
+  font-size: 1.5em;
+  bottom: 1rem;
+  right: 6rem;
+}
+
+.bannerPOR #time{
+  position: absolute;
+  color: aquamarine;
+  font-weight: bold;
+  font-size: 1.5em;
+  bottom: 1rem;
+  right: 6rem;
+}
+/* Home Page's Content */
+
+.content{
+  max-width: 500px;
+}
+
+
+.content h2{
+  color: #fff;
+  font-size: 2.5em;
+  z-index: 10;
+}
+
+.content h2 span{
+  color: #592892;
+  font-size: 1.2em;
+}
+
+.content p{
+  font-size: 1.2em;
+  color: #fff;
+  font-weight: 300;
+}
+
+.content a{
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  background: #fff;
+  color: #000;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.content a:hover{
+  color: #4a1774;
+  background: #743996;
+  box-shadow: 0 0 10px #743996, 0 0 40px #743996, 0 0 80px #743996;
+}
+
+
+.sci{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  right: initial;
+  bottom: 10px;
+  margin-right: 10px;
+  left: 90px;
+}
+
+.sci li{
+  color: transparent;
+}
+
+.sci li a{
+  position: relative;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  margin: 0 10px 0;
+}
+
+.sci li a:hover{
+  background: rgb(70, 17, 70);
+}
+
+.sci li a img{
+  max-width: 50px;
+  filter: invert(1);
+  mix-blend-mode: difference;
+}
+
+/* main page mobile device */
+
+@media (max-width: 900px){
+  header{
+    padding: 20px 50px;
+  }
+  header .logo img{
+    max-width: 55%;
+  }
+  .content p{
+    width:300px;
+  }
+  .banner{
+    padding: 100px 50px 150px;
+    background:rgba(0, 0, 0, 1);
+  }
+  .banner h2{
+    font-size: 1.8em;
+  }
+  .banner .content p, .banner .content a{
+    font-size: 1em;
+  }
+  .banner.active{
+    transform: translateX(-250px);
+  }
+  #navbar{
+    width: 250px;
+  }
+  #navbar ul li a{
+    font-size: 1.5em;
+    margin: 5px 0;
+  }
+  .sci{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    right: initial;
+    flex-direction: row;
+  }
+  .sci li a{
+    margin: initial;
+    margin-right: 10px;
+  }
+}
+
+/* About Page */
+
+.bannerABT{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  min-height: 100vh;
+  padding: 100px;
+  background: url(./images/black-panther-2560x1440-artwork-5k-12578.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+}
+
+.bannerABT.active{
+  transform: translateX(-400px);
+}
+
+/* content-ABT" */
+
+.content-ABT{
+  max-width: 400px;
+  position: absolute;
+  display: flex;
+  height: auto;
+  flex-direction: column;  
+  transition: 3s;
+}
+
+
+.content-ABT h1{
+  color: #fff;
+  font-size: 2.3em;
+}
+
+.content-ABT h1 span{
+  color: #592892;
+  font-size: 1.2em;
+}
+
+.content-ABT p{
+  font-size: 1.2em;
+  color: #fff;
+  font-weight: 300;
+}
+
+
+/* content2-ABT" */
+
+.content2-ABT{
+  max-width: 350px;
+  position: absolute;
+  display: flex;
+  height: auto;
+  right: 100px;
+  bottom: 100px;
+  text-align: right;
+  flex-direction: column;  
+  justify-content: flex-end;
+  transition: 3s;
+}
+
+
+.content2-ABT h1{
+  color: #fff;
+  text-align: right;
+  font-size: 2.3em;
+}
+
+.content2-ABT h1 span{
+  color: #592892;
+  font-size: 1.2em;
+}
+
+
+.content2-ABT p{
+  font-size: 1em;
+  color: #fff;
+  font-weight: 300;
+}
+
+/* content3-ABT */
+
+.content3-ABT{
+  max-width: 360px;
+  position: absolute;
+  display: flex;
+  right: 100px;
+  height: auto;
+  top: 100px;
+  text-align: right;
+  flex-direction: column;  
+  justify-content: flex-end;
+  transition: 3s;
+}
+
+.content3-ABT h1{
+  color: #fff;
+  text-align: right;
+  font-size: 2.3em;
+}
+
+.content3-ABT h1 span{
+  color: #592892;
+  font-size: 1.2em;
+}
+
+.content3-ABT p{
+  font-size: 1.2em;
+  color: #fff;
+  font-weight: 300;
+}
+
+/* about page mobile device */
+
+@media (max-width: 900px){
+
+  .content-ABT p{
+    width:300px;
+  }
+  .bannerABT{
+    padding: 100px 50px 150px;
+    background:rgba(0, 0, 0, 1);
+  }
+  .bannerABT h1{
+    font-size: 1.6em;
+    text-align: left;
+  }
+  .bannerABT p{
+    font-size: 0.8em;
+    text-align: left;
+  }
+  .bannerABT.active{
+    transform: translateX(-250px);
+  }
+  .content-ABT{
+    margin-top: 40px;
+  }
+  .content2-ABT{
+    padding-top: 100px;
+    margin-bottom: 100px
+  }
+  .content3-ABT{
+    margin-top:100px;
+    margin-left: 50px;
+  }
+}
+
+/* hobby page */
+
+.bannerHOB{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  min-height: 100vh;
+  padding: 100px;
+  background: url(./images/black-panther-2560x1440-artwork-5k-12578.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+}
+
+.bannerHOB.active{
+  transform: translateX(-400px);
+}
+
+.content-HOB{
+  max-width: 450px;
+  position: absolute;
+  display: flex;
+  height: auto;
+  flex-direction: column;  
+  transition: 3s;
+}
+
+.bannerHOB header .logo img{
+  max-width: 55%;
+}
+
+.bannerHOB .sci{
+  left: 160px
+}
+
+/* content-HOB" */
+
+.content-HOB{
+  max-width: 420px;
+  position: absolute;
+  display: flex;
+  height: auto;
+  flex-direction: column;  
+  transition: 3s;
+  top: 150px;
+  margin-left: 70px;
+}
+
+.content-HOB h1{
+  color: #fff;
+  font-size: 2.2em;
+}
+
+.content-HOB h1 span{
+  color: #592892;
+  font-size: 0.9em;
+}
+
+.content-HOB p{
+  font-size: 0.9em;
+  color: #fff;
+  font-weight: 300;
+}
+
+/* content2-HOB" */
+
+.content2-HOB{
+  max-width: 420px;
+  position: absolute;
+  display: flex;
+  height: auto;
+  flex-direction: column;  
+  transition: 3s;
+  margin-bottom: -20px;
+  margin-left: 70px;
+}
+
+
+.content2-HOB h1{
+  color: #fff;
+  font-size: 2.2em;
+}
+
+.content2-HOB h1 span{
+  color: #592892;
+  font-size: 0.9em;
+}
+
+.content2-HOB p{
+  font-size: 0.9em;
+  color: #fff;
+  font-weight: 300;
+}
+
+/* content3-HOB" */
+
+.content3-HOB{
+  max-width: 420px;
+  position: absolute;
+  display: flex;
+  height: auto;
+  flex-direction: column;  
+  transition: 3s;
+  margin-bottom: -380px;
+  margin-left: 70px;
+}
+
+
+.content3-HOB h1{
+  color: #fff;
+  font-size: 2.2em;
+}
+
+.content3-HOB h1 span{
+  color: #592892;
+  font-size: 0.9em;
+}
+
+.content3-HOB p{
+  font-size: 0.9em;
+  color: #fff;
+  font-weight: 300;
+}
+
+/* hobby page image slider*/
+
+#carouselExampleCaptions{
+  position: relative;
+  display: flex;
+  height: 70vh;
+  width: 700px;
+  margin-left: 49em;
+}
+
+#carouselExampleCaptions .carousel-inner{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#carouselExampleCaptions .carousel-inner .carousel-item{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: url(./images/image1.JPG);
+  background-size: cover;
+  background-position: center;
+}
+
+#carouselExampleCaptions .carousel-inner .carousel-item.carousel-item:nth-child(2){
+  background: url(./images/image2.JPG);
+  background-size: cover;
+  background-position: center;
+}
+
+#carouselExampleCaptions .carousel-inner .carousel-item.carousel-item:nth-child(3){
+  background: url(./images/image3.JPG);
+  background-size: cover;
+  background-position: center;
+}
+
+#carouselExampleCaptions .carousel-inner .carousel-item.carousel-item:nth-child(4){
+  background: url(./images/image4.JPG);
+  background-size: cover;
+  background-position: center;
+}
+
+#carouselExampleCaptions .carousel-inner .carousel-item.carousel-item:nth-child(5){
+  background: url(./images/image5.JPG);
+  background-size: cover;
+  background-position: center;
+}
+
+/* about page mobile device */
+
+@media (max-width: 900px){
+
+  .bannerHOB{
+    padding: 100px 50px 150px;
+    background:rgba(0, 0, 0, 1);
+  }
+  .bannerHOB h1{
+    font-size: 1.6em;
+    text-align: left;
+  }
+  .bannerHOB p{
+    font-size: 0.8em;
+    text-align: left;
+  }
+  .bannerHOB.active{
+    transform: translateX(-250px);
+  }
+  .content-HOB{
+    max-width: 450px;
+    margin-top: 260px;
+  }
+  .content2-HOB{
+    max-width: 450px;
+    padding-top: 100px;
+    margin-bottom: -300px
+  }
+  .content3-HOB{
+    max-width: 450px;
+    margin-top:280px;
+  }
+  #carouselExampleCaptions{
+    position: absolute;
+    display: flex;
+    height: 30vh;
+    width: 300px;
+    right: 190px;
+    top: 120px;
+    
+  }
+  .bannerHOB .sci{
+    left: 120px;
+    bottom: 30px;
+  }
+}
+
+/* portfolio page */
+
+.bannerPOR{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  min-height: 100vh;
+  padding: 100px;
+  background: url(./images/black-panther-2560x1440-artwork-5k-12578.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+}
+
+.bannerPOR.active{
+  transform: translateX(-400px);
+}
+
+.content-POR{
+  max-width: 450px;
+  position: absolute;
+  display: flex;
+  height: auto;
+  flex-direction: column;  
+  transition: 3s;
+}
+
+.bannerPOR header .logo img{
+  max-width: 55%;
+}
+
+/* content-POR" */
+
+.content-POR{
+  max-width: 420px;
+  position: absolute;
+  display: flex;
+  height: auto;
+  flex-direction: column;  
+  transition: 3s;
+}
+
+.content-POR h1{
+  color: #fff;
+  font-size: 2em;
+}
+
+.content-POR h1 span{
+  color: #592892;
+  font-size: 2em;
+}
+
+.content-POR p{
+  font-size: 0.9em;
+  color: #fff;
+  font-weight: 300;
+}
